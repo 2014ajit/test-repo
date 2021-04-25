@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+				echo "${BUILD_NUMBER}"
+				echo " Starting ant build"
+                sh "ant build.xml -Dbuild_parameter=${BUILD_NUMBER} -verbose"
             }
         }
         stage('Test') {
