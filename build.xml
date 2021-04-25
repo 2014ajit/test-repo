@@ -6,7 +6,6 @@
 </target>
 
 <target name="build" depends="test">
-		<echo message="Build ${env.BUILD_NUMBER}" />
-		
+	<echo message="Build ${build_parameter}" />
 </target>
 </project>
