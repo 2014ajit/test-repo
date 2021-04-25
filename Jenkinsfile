@@ -6,7 +6,7 @@ pipeline {
             steps {
 				echo "${BUILD_NUMBER}"
 				echo " Starting ant build"
-                sh "ant build.xml -verbose"
+                sh "ant -f build.xml -Dbuild_parameter=${BUILD_NUMBER} -verbose"
             }
         }
         stage('Test') {

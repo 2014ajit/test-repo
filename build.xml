@@ -1,5 +1,12 @@
-<project name="Hello World" default="build" basedir=".">
-<target name="build" >
+<project name="Hello World Plugin" default="build" basedir=".">
+
+<target name="test" >
     <property environment="env" />
-    <echo>BUILD_NUMBER: ${env.BUILD_NUMBER}</echo>
+	<property name="build_parameter"  value="${env.BUILD_NUMBER}"/>
 </target>
+
+<target name="build" depends="test">
+		<echo message="Build ${env.BUILD_NUMBER}" />
+		
+</target>
+</project>
