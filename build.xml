@@ -1,0 +1,5 @@
+<project name="Hello World" default="build" basedir=".">
+<target name="build" >
+    <property environment="env" />
+    <echo>BUILD_NUMBER: ${env.BUILD_NUMBER}</echo>
+</target>
