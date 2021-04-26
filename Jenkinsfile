@@ -1,16 +1,13 @@
 pipeline {
     agent any
-	environment { 
+    environment { 
         JENKINS_WORKSPACE = "${env.WORKSPACE}"
     }
-
     stages {
-        stage('Build') {
+        stage('Example') {
             steps {
-				echo "Running on ${JENKINS_WORKSPACE}"
+                echo "Running on ${JENKINS_WORKSPACE}"
             }
         }
-
-}
-
+    }
 }
